@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333333;
+  color: #ffffff;
+  user-select: none;
+}
+
+#container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#main-heading {
+  margin: 1.5rem 0;
+  font-size: 2.6rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'Staatliches', cursive;
+}
+
+/* options container */
+#options-container, #result-container {
+  border: 2px solid #aaaaaa;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+#options {
+  list-style: none;
+  margin-top: 1rem;
+  text-align: center;
+} 
+
+.option:not(:last-child), .card {
+  margin-bottom: 1rem;
+}
+
+.option, .card {
+  background-color: #ff0000;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 4px solid transparent;
+  transition: all 1s ;
+}
+
+.option:nth-child(2), .card:nth-child(3) {
+  background-color: #0004ff;
+}
+
+.option:nth-child(3), .card:nth-child(4) {
+  background-color: #ff00bf;
+}
+.option:nth-child(4), .card:nth-child(5) {
+  background-color: #8c00ff;
+}
+
+.option:hover {
+  background: url(text-bg.png) no-repeat center center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-bg 100s linear infinite;
+  -webkit-animation: text-bg 20s linear infinite;
+}
+
+@keyframes text-bg {
+  0% {
+    background-position: 0% 30%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.option:nth-child(1):hover {
+  border: 4px solid #ff0000;
+}
+.option:nth-child(2):hover {
+  border: 4px solid #0004ff;
+}
+.option:nth-child(3):hover {
+  border: 4px solid #ff00bf;
+}
+.option:nth-child(4):hover {
+  border: 4px solid #8c00ff;
+}
+
+/* Result container */
+#result-container {
+  width: 400px;
+  display: none;
+}
+
+#input {
+  width: 100%;
+  height: 1.8rem;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+  background-color: transparent;
+  border-bottom: 2px solid #ffffff;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+#input::placeholder {
+  color: #999999;
+  letter-spacing: 1px;
+}
+
+.card {
+  cursor: default;
+}
+
+#back-btn {
+  outline: none;
+  padding: 8px 18px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
+  transition: all 0.4s;
+}
+
+#back-btn:hover {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: #333333;
+}
+
+footer {
+  margin-top: 1.5rem;
+}
+
+/* Media querie */
+@media(max-width: 500px) {
+
+  #options-container, #result-container {
+    padding: 15px;
+    width: 90%;
+    margin-top: 5rem;
+  }
+
+  .option:not(:last-child), .card {
+    margin-bottom: 2rem;
+  }
+
+  #input {
+    margin: 2rem 0;
+  }
+}

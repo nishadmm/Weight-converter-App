@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <title>Weight Converter App</title>
+</head>
+
+<body>
+
+  <div id="container">
+    <h1 id="main-heading">Weight Converter App</h1>
+    <!-- Options container -->
+    <div id="options-container">
+      <h2><i class="fas fa-arrow-circle-down"></i> Select what you want ?</h2>
+      <ul id="options">
+        <li class="option pound-option">
+          <p class="lead pound-option">Pounds &rArr; Kilograms, Ounces, Grams</p>
+        </li>
+        <li class="option kilogram-option">
+          <p class="lead kilogram-option">Kilogram &rArr; Pounds, Ounces, Grams</p>
+        </li>
+        <li class="option gram-option">
+          <p class="lead gram-option">Gram &rArr; Kilograms, Ounces, Pounds</p>
+        </li>
+        <li class="option ounces-option">
+          <p class="lead ounces-option">Ounces &rArr; Kilograms, Pounds, Grams</p>
+        </li>
+      </ul>
+    </div>
+    <!-- Result container -->
+    <div id="result-container">
+      <input type="number" id="input" value="">
+      <div class="cards">
+        <div class="card pound-card">
+          <h4>Pounds : <span id="pound-r"></span></h4>
+        </div>
+        <div class="card kilogram-card">
+          <h4>Kilogram : <span id="kilogram-r"></span></h4>
+        </div>
+        <div class="card gram-card">
+          <h4>Gram : <span id="gram-r"></span></h4>
+        </div>
+        <div class="card ounces-card">
+          <h4>Ounces : <span id="ounces-r"></span></h4>
+        </div>
+      </div>
+      <button id="back-btn"><i class="fas fa-arrow-circle-left"></i> Back</button>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p>Nishad &copy;</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
